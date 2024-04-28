@@ -2,8 +2,9 @@ package org.ycm.common.util;
 
 import lombok.extern.slf4j.Slf4j;
 import org.apache.commons.lang3.StringUtils;
+import org.jeecg.common.util.RedisUtil;
 import org.ycm.common.api.CommonAPI;
-import org.ycm.common.constant.CacheConstant;
+import org.jeecg.common.constant.CacheConstant;
 import org.ycm.common.constant.CommonConstant;
 import org.ycm.common.constant.TenantConstant;
 import org.ycm.common.desensitization.util.SensitiveInfoUtil;

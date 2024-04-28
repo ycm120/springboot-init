@@ -2,7 +2,7 @@ package org.ycm.common.util.dynamic.db;
 
 import com.alibaba.druid.pool.DruidDataSource;
 import org.ycm.common.api.CommonAPI;
-import org.ycm.common.constant.CacheConstant;
+import org.jeecg.common.constant.CacheConstant;
 import org.ycm.common.system.vo.DynamicDataSourceModel;
 import org.ycm.common.util.SpringContextUtils;
 import org.springframework.data.redis.core.RedisTemplate;
