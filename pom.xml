@@ -20,6 +20,8 @@
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 
 		<!-- 工具 -->
+		<commons-io.version>2.11.0</commons-io.version>
+		<commons.version>2.6</commons.version>
 		<fastjson.version>1.2.83</fastjson.version>
 		<xxl-job-core.version>2.2.0</xxl-job-core.version>
 		<hutool.version>5.8.25</hutool.version>
@@ -54,6 +56,8 @@
 		<justauth-spring-boot-starter.version>1.4.0</justauth-spring-boot-starter.version>
 		<dom4j.version>1.6.1</dom4j.version>
 		<qiniu-java-sdk.version>7.4.0</qiniu-java-sdk.version>
+
+		<jeecgboot.version>3.6.3</jeecgboot.version>
 	</properties>
 
 
@@ -65,14 +69,7 @@
     </modules>
 
 	<repositories>
-		<repository>
-			<id>aliyun</id>
-			<name>aliyun Repository</name>
-			<url>https://maven.aliyun.com/repository/public</url>
-			<snapshots>
-				<enabled>false</enabled>
-			</snapshots>
-		</repository>
+
 		<repository>
 			<id>jeecg</id>
 			<name>jeecg Repository</name>
@@ -92,9 +89,18 @@
 				<enabled>true</enabled>
 			</snapshots>
 		</repository>
+		<repository>
+			<id>aliyun</id>
+			<name>aliyun Repository</name>
+			<url>https://maven.aliyun.com/repository/public</url>
+			<snapshots>
+				<enabled>false</enabled>
+			</snapshots>
+		</repository>
 	</repositories>
 
 	<dependencies>
+
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-test</artifactId>
@@ -171,6 +177,13 @@
 				<groupId>org.flywaydb</groupId>
 				<artifactId>flyway-core</artifactId>
 				<version>7.15.0</version>
+			</dependency>
+
+			<!-- jeecg tools -->
+			<dependency>
+				<groupId>org.jeecgframework.boot</groupId>
+				<artifactId>jeecg-boot-common</artifactId>
+				<version>${jeecgboot.version}</version>
 			</dependency>
 		</dependencies>
 	</dependencyManagement>

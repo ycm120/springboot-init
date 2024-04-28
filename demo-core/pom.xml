@@ -11,14 +11,6 @@
 
 	<repositories>
 		<repository>
-			<id>aliyun</id>
-			<name>aliyun Repository</name>
-			<url>https://maven.aliyun.com/repository/public</url>
-			<snapshots>
-				<enabled>false</enabled>
-			</snapshots>
-		</repository>
-		<repository>
 			<id>jeecg</id>
 			<name>jeecg Repository</name>
 			<url>https://maven.jeecg.org/nexus/content/repositories/jeecg</url>
@@ -37,9 +29,22 @@
 				<enabled>true</enabled>
 			</snapshots>
 		</repository>
+		<repository>
+			<id>aliyun</id>
+			<name>aliyun Repository</name>
+			<url>https://maven.aliyun.com/repository/public</url>
+			<snapshots>
+				<enabled>false</enabled>
+			</snapshots>
+		</repository>
 	</repositories>
 	
 	<dependencies>
+		<!--jeecg-tools-->
+		<dependency>
+			<groupId>org.jeecgframework.boot</groupId>
+			<artifactId>jeecg-boot-common</artifactId>
+		</dependency>
 		<!--集成springmvc框架并实现自动配置 -->
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
@@ -102,7 +107,7 @@
 			<version>${mysql-connector-java.version}</version>
 			<scope>runtime</scope>
 		</dependency>
-      
+
 		<!-- Quartz定时任务 -->
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
@@ -183,6 +188,17 @@
 		</dependency>
 
 
+		<!-- commons -->
+		<dependency>
+			<groupId>commons-io</groupId>
+			<artifactId>commons-io</artifactId>
+			<version>${commons-io.version}</version>
+		</dependency>
+		<dependency>
+			<groupId>commons-lang</groupId>
+			<artifactId>commons-lang</artifactId>
+			<version>${commons.version}</version>
+		</dependency>
 		<!-- Redis -->
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
