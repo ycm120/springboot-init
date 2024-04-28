@@ -9,10 +9,10 @@
 		<relativePath/>
 	</parent>
   	<groupId>org.ycm</groupId>
-  	<artifactId>ycm-springboot-parent</artifactId>
+  	<artifactId>springboot-parent</artifactId>
   	<version>0.0.1-SNAPSHOT</version>
   	<packaging>pom</packaging>
-  	<name>YCM SPRINGBOOT ${project.version}</name>
+  	<name>springboot-parent ${project.version}</name>
 
 	<properties>
 		<ycm-springboot.version>0.0.1-SNAPSHOT</ycm-springboot.version>
@@ -20,11 +20,12 @@
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 
 		<!-- 工具 -->
-        <fastjson.version>1.2.83</fastjson.version>
+		<fastjson.version>1.2.83</fastjson.version>
 		<xxl-job-core.version>2.2.0</xxl-job-core.version>
 		<hutool.version>5.8.25</hutool.version>
 		<minio.version>8.0.3</minio.version>
 		<knife4j-spring-boot-starter.version>4.4.0</knife4j-spring-boot-starter.version>
+		<java-jwt.version>3.11.0</java-jwt.version>
 
 		<!-- 数据库驱动 -->
 		<mysql-connector-java.version>8.0.27</mysql-connector-java.version>
@@ -42,22 +43,55 @@
 		<spring-cloud.version>2021.0.3</spring-cloud.version>
 		<spring-cloud-alibaba.version>2021.0.1.0</spring-cloud-alibaba.version>
 		<alibaba.nacos.version>2.0.4</alibaba.nacos.version>
+
+		<!-- shiro -->
+		<shiro.version>1.12.0</shiro.version>
+		<java-jwt.version>3.11.0</java-jwt.version>
+		<shiro-redis.version>3.2.2</shiro-redis.version>
+		<codegenerate.version>1.4.7</codegenerate.version>
+		<autopoi-web.version>1.4.7</autopoi-web.version>
+		<minio.version>8.0.3</minio.version>
+		<justauth-spring-boot-starter.version>1.4.0</justauth-spring-boot-starter.version>
+		<dom4j.version>1.6.1</dom4j.version>
+		<qiniu-java-sdk.version>7.4.0</qiniu-java-sdk.version>
 	</properties>
 
+
+
+
+	<!-- 子模块 -->
 	<modules>
-        <module>core</module>
-        <module>system</module>
+        <module>demo-core</module>
     </modules>
 
 	<repositories>
 		<repository>
-            <id>aliyun</id>
-            <name>aliyun Repository</name>
-            <url>https://maven.aliyun.com/repository/public</url>
-            <snapshots>
+			<id>aliyun</id>
+			<name>aliyun Repository</name>
+			<url>https://maven.aliyun.com/repository/public</url>
+			<snapshots>
 				<enabled>false</enabled>
 			</snapshots>
-        </repository>
+		</repository>
+		<repository>
+			<id>jeecg</id>
+			<name>jeecg Repository</name>
+			<url>https://maven.jeecg.org/nexus/content/repositories/jeecg</url>
+			<snapshots>
+				<enabled>false</enabled>
+			</snapshots>
+		</repository>
+		<repository>
+			<id>jeecg-snapshots</id>
+			<name>jeecg-snapshots Repository</name>
+			<url>https://oss.sonatype.org/content/repositories/snapshots</url>
+			<releases>
+				<enabled>false</enabled>
+			</releases>
+			<snapshots>
+				<enabled>true</enabled>
+			</snapshots>
+		</repository>
 	</repositories>
 
 	<dependencies>
